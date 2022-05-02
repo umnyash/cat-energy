@@ -91,7 +91,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('source/img/copyright-logo.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -174,7 +174,7 @@ const build = gulp.series(
     styles,
     html,
     // scripts,
-    // sprite,
+    sprite,
     createWebp
   ),
 );
@@ -191,7 +191,7 @@ exports.default = gulp.series(
     styles,
     html,
     // scripts,
-    // sprite,
+    sprite,
     createWebp
   ),
   gulp.series(
