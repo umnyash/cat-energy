@@ -1,0 +1,37 @@
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-color-secondary;
+  background-color: $background-color-accent;
+
+  &:hover {
+    background-color: $button-hover-background-color;
+  }
+
+  &:active {
+    color: fade-out($text-color-secondary, 0.7);
+    background-color: $button-hover-background-color;
+  }
+}
+
+.button--secondary {
+  color: $text-color;
+  background-color: $button-secondary-background-color;
+
+  &:hover {
+    background-color: $button-secondary-hover-background-color;
+  }
+
+  &:active {
+    color: fade-out($text-color, 0.7);
+    background-color: $button-secondary-hover-background-color;
+  }
+}
+
+.button--adaptive {
+  font-size: inherit;
+  line-height: inherit;
+}

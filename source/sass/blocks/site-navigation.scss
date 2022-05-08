@@ -1,0 +1,32 @@
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: inherit;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

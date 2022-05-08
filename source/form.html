@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswald-regular.woff2" as="font">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicons/favicon.svg" type="img/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
     <title>Cat Energy: Подбор программы</title>
   </head>
   <body class="page__body">
@@ -34,82 +40,82 @@
       </div>
     </header>
     <main>
-      <h1 class="page__heading">Подбор программы питания <span class="visually-hidden">«Cat Energy»</span></h1>
+      <h1 class="page__heading heading">Подбор программы питания <span class="visually-hidden">«Cat Energy»</span></h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <p class="form__desc">Заполните анкету, и мы подберём программу питания для вашего кота</p>
         <small class="visually-hidden">Поля со знаком * обязательны к заполнению.</small>
         <fieldset class="form__section">
-          <legend>Данные кота</legend>
-          <label>
-            <span>Имя:*</span>
-            <input type="text" name="pet-name" placeholder="Барсик">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="form__field textfield">
+            <span class="textfield__label">Имя:*</span>
+            <input class="textfield__control" type="text" name="pet-name" placeholder="Барсик">
           </label>
-          <label>
-            <span>Вес (кг):*</span>
-            <input type="number" name="pet-weight" min="0" placeholder="7">
+          <label class="form__field textfield">
+            <span class="textfield__label">Вес (кг):*</span>
+            <input class="textfield__control" type="number" name="pet-weight" min="0" placeholder="7">
           </label>
-          <label>
-            <span>Возраст (лет):</span>
-            <input type="number" name="pet-age" min="0" placeholder="7">
+          <label class="form__field textfield">
+            <span class="textfield__label">Возраст (лет):</span>
+            <input class="textfield__control" type="number" name="pet-age" min="0" placeholder="7">
           </label>
           <div>
             <p>Цель:</p>
             <div>
-              <label>
-                <input type="radio" name="purpose" value="weight-loss" checked>
-                <span>Похудение</span>
+              <label class="form__field radiobutton">
+                <input class="radiobutton__control visually-hidden" type="radio" name="purpose" value="weight-loss" checked>
+                <span class="radiobutton__label">Похудение</span>
               </label>
-              <label>
-                <input type="radio" name="purpose" value="weight-gain">
-                <span>Набор массы</span>
+              <label class="form__field radiobutton">
+                <input class="radiobutton__control visually-hidden" type="radio" name="purpose" value="weight-gain">
+                <span class="radiobutton__label">Набор массы</span>
               </label>
-              <label>
-                <input type="radio" name="purpose" value="unknown">
-                <span>Не знаю (нужен ваш совет)</span>
+              <label class="form__field radiobutton">
+                <input class="radiobutton__control visually-hidden" type="radio" name="purpose" value="unknown">
+                <span class="radiobutton__label">Не знаю (нужен ваш совет)</span>
               </label>
             </div>
           </div>
         </fieldset>
         <fieldset class="form__section">
-          <legend>Контактные данные (владельца кота)</legend>
-          <label>
-            <span>E-mail:*</span>
-            <input type="email" name="owner-email" placeholder="kuklachev@gmail.com">
+          <legend class="heading heading--small">Контактные данные (владельца кота)</legend>
+          <label class="form__field textfield">
+            <span class="textfield__label">E-mail:*</span>
+            <input class="textfield__control" type="email" name="owner-email" placeholder="kuklachev@gmail.com">
           </label>
-          <label>
-            <span>Телефон:*</span>
-            <input type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
-          </label>
-        </fieldset>
-        <fieldset class="form__section">
-          <legend>Комментарий</legend>
-          <label>
-            <span>Повадки вашего кота:</span>
-            <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label class="form__field textfield">
+            <span class="textfield__label">Телефон:*</span>
+            <input class="textfield__control" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
           </label>
         </fieldset>
         <fieldset class="form__section">
-          <legend>Дополнительно</legend>
-          <label>
-            <input type="checkbox" name="additionally" value="sugar-substitute" checked>
-            <span>Сахарозаменитель</span>
+          <legend class="heading heading--small">Комментарий</legend>
+          <label class="form__field textarea">
+            <span class="textarea__label">Повадки вашего кота:</span>
+            <textarea class="textarea__control" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
-          <label>
-            <input type="checkbox" name="additionally" value="drinking-water">
-            <span>Питьевая вода</span>
+        </fieldset>
+        <fieldset class="form__section">
+          <legend class="heading heading--small">Дополнительно</legend>
+          <label class="form__field checkbox">
+            <input class="checkbox__control visually-hidden" type="checkbox" name="additionally" value="sugar-substitute" checked>
+            <span class="checkbox__label">Сахарозаменитель</span>
           </label>
-          <label>
-            <input type="checkbox" name="additionally" value="milk">
-            <span>Молоко</span>
+          <label class="form__field checkbox">
+            <input class="checkbox__control visually-hidden" type="checkbox" name="additionally" value="drinking-water">
+            <span class="checkbox__label">Питьевая вода</span>
           </label>
-          <label>
-            <input type="checkbox" name="additionally" value="vitamins">
-            <span>Витамины</span>
+          <label class="form__field checkbox">
+            <input class="checkbox__control visually-hidden" type="checkbox" name="additionally" value="milk">
+            <span class="checkbox__label">Молоко</span>
+          </label>
+          <label class="form__field checkbox">
+            <input class="checkbox__control visually-hidden" type="checkbox" name="additionally" value="vitamins">
+            <span class="checkbox__label">Витамины</span>
           </label>
         </fieldset>
         <div>
-          <button type="submit">Отправить заявку</button>
-          <small aria-hidden="true">* &mdash; Обязательные поля</small>
+          <button class="button button--adaptive" type="submit">Отправить заявку</button>
+          <small class="form__comment" aria-hidden="true">* &mdash; Обязательные поля</small>
         </div>
       </form>
     </main>
@@ -132,7 +138,7 @@
         </picture>
       </section>
       <div class="page-footer__container container">
-        <a class="page-footer__logo">
+        <a class="page-footer__logo" href="index.html">
           <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24" alt="Логотип: надпись CAT ENERGY.">
         </a>
         <ul class="page-footer__socials socials">

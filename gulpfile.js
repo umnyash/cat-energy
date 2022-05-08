@@ -77,7 +77,8 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src([
     'source/img/**/*.{jpg,png}',
-    '!source/img/backgrounds/**/*.{jpg,png}',
+    '!source/img/backgrounds/**',
+    '!source/img/favicons/**',
     'source/files/**/*.{jpg,png}'
   ], {
     base: 'source'

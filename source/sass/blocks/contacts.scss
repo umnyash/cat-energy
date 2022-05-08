@@ -1,0 +1,26 @@
+.contacts {
+  font-size: 14px;
+  list-style: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.contacts__lead {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__text {
+  font-style: normal;
+  color: $text-color-additional;
+}

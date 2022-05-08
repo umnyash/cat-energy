@@ -1,0 +1,15 @@
+.textfield {
+  color: $text-color-additional;
+}
+
+.textfield__control {
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

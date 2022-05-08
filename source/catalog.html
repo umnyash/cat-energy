@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswald-regular.woff2" as="font">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicons/favicon.svg" type="img/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
     <title>Cat Energy: Каталог продукции</title>
   </head>
   <body class="page__body">
@@ -34,10 +40,10 @@
       </div>
     </header>
     <main>
-      <h1 class="page__heading">Каталог продукции <span class="visually-hidden">«Cat Energy»</span></h1>
-      <section>
+      <h1 class="page__heading heading">Каталог продукции <span class="visually-hidden">«Cat Energy»</span></h1>
+      <section class="catalog">
         <h2 class="visually-hidden">Основная продукция</h2>
-        <table>
+        <table class="price-list">
           <thead class="visually-hidden">
             <tr>
               <th scope="col">Название</th>
@@ -49,9 +55,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Pro 500&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -71,12 +77,12 @@
                 <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Pro 1000&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -96,12 +102,12 @@
                 <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Pro 500&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -121,12 +127,12 @@
                 <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Pro 1000&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -146,12 +152,12 @@
                 <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Slim 500&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -171,12 +177,12 @@
                 <span aria-hidden="true">Цена</span> 400&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Slim 1000&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Slim 1000&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -196,12 +202,12 @@
                 <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Cat Energy Slim 500&nbsp;г</a>
+            <tr class="price-list__item">
+              <th class="price-list__name" scope="row">
+                <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
               </th>
               <td>
                 <a href="#!">
@@ -221,22 +227,22 @@
                 <span aria-hidden="true">Цена</span> 500&nbsp;&#8381;
               </td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row" colspan="2">Показать ещё 100500 товаров</th>
-              <td colspan="3">На самом деле вкусов гораздо больше!</td>
+            <tr class="price-list__info">
+              <th class="price-list__info-heading" scope="row" colspan="2">Показать ещё 100500 товаров</th>
+              <td class="price-list__info-text" colspan="3">На самом деле вкусов гораздо больше!</td>
               <td>
-                <a href="#!">Показать все</a>
+                <a class="price-list__info-button button button--secondary" href="#!">Показать все</a>
               </td>
             </tr>
           </tbody>
         </table>
       </section>
-      <section>
-        <h2>Дополнительные товары</h2>
-        <table>
+      <section class="extra-catalog">
+        <h2 class="heading heading--small">Дополнительные товары</h2>
+        <table class="extra-price-list">
           <thead class="visually-hidden">
             <tr>
               <th scope="col">Название</th>
@@ -246,49 +252,49 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">
-                <a href="#!">Сахарозаменитель</a>
+            <tr class="extra-price-list__item">
+              <th class="extra-price-list__name" scope="row">
+                <a class="extra-price-list__name-link" href="#!">Сахарозаменитель</a>
               </th>
               <td>1 упаковка (100&nbsp;г)</td>
               <td>200&nbsp;&#8381;</td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="extra-price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Питьевая вода</a>
+            <tr class="extra-price-list__item">
+              <th class="extra-price-list__name" scope="row">
+                <a class="extra-price-list__name-link" href="#!">Питьевая вода</a>
               </th>
               <td>5 литров</td>
               <td>50&nbsp;&#8381;</td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="extra-price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Молоко</a>
+            <tr class="extra-price-list__item">
+              <th class="extra-price-list__name" scope="row">
+                <a class="extra-price-list__name-link" href="#!">Молоко</a>
               </th>
               <td>1 литр</td>
               <td>100&nbsp;&#8381;</td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="extra-price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                <a href="#!">Витамины</a>
+            <tr class="extra-price-list__item">
+              <th class="extra-price-list__name" scope="row">
+                <a class="extra-price-list__name-link" href="#!">Витамины</a>
               </th>
               <td>1 упаковка (30&nbsp;г)</td>
               <td>300&nbsp;&#8381;</td>
               <td>
-                <a href="#!">Заказать</a>
+                <a class="extra-price-list__button button" href="#!">Заказать</a>
               </td>
             </tr>
           </tbody>
         </table>
-        <p>Закажите всё и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
+        <p class="notice">Закажите всё и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
       </section>
     </main>
     <footer class="page__footer page-footer">
@@ -310,7 +316,7 @@
         </picture>
       </section>
       <div class="page-footer__container container">
-        <a class="page-footer__logo">
+        <a class="page-footer__logo" href="index.html">
           <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24" alt="Логотип: надпись CAT ENERGY.">
         </a>
         <ul class="page-footer__socials socials">
