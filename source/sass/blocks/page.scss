@@ -1,12 +1,42 @@
+.page {
+  overflow-x: hidden;
+}
+
 .page__body {
-  font-family: "Arial", sans-serif;
+  position: relative;
+  display: grid;
+  min-width: $mobile-min-width;
+  min-height: 100vh;
+  margin: 0;
+  grid-template-rows: auto 1fr auto;
+  font-family: $basic-font-family;
   font-size: 14px;
   line-height: 18px;
   color: $text-color;
   background-color: $background-color;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.page__heading {
+  margin: 28px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 41px;
+    margin-bottom: 45px
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 47px;
+  }
+}
+
+.page__form {
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
   }
 }

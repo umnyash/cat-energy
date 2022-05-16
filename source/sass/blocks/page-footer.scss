@@ -1,13 +1,118 @@
 .page-footer {
   background-color: $background-color-secondary;
+  padding: 0 0 5px;
+}
+
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    column-gap: 40px;
+    align-items: center;
+    padding-top: 49px;
+    padding-bottom: 44px;
+  }
+}
+
+.page-footer__item {
+  @media (max-width: $mobile-max-width) {
+    position: relative;
+    padding: 14px 0 12px;
+    border-bottom: 1px solid $page-footer-item-border-color;
+    text-align: center;
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.page-footer__item--align--right {
+  @media (max-width: $mobile-max-width) {
+    text-align: right;
+  }
 }
 
 .page-footer__logo {
+  display: inline-block;
+  margin: 25px 0 19px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: opacity, outline-color;
+  transition-duration: $animation-duration;
+
   &[href]:hover {
     opacity: 0.8;
+  }
+
+  &[href]:focus-visible {
+    outline-color: $text-color-additional;
   }
 
   &[href]:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__logo-img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-footer__socials {
+  margin: 0;
+}
+
+.page-footer__copyright-link {
+  display: inline-flex;
+  margin: 8px 0 0;
+  align-items: center;
+  text-decoration: none;
+  color: $text-color-additional;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: opacity, outline-color;
+  transition-duration: $animation-duration;
+
+  &:focus-visible {
+    outline-color: $text-color-additional;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.page-footer__copyright-name {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 24px;
+  }
+}
+
+.page-footer__copyright-logo {
+  fill: $copyright-logo-color;
+  transition-property: fill;
+  transition-duration: $animation-duration;
+}
+
+.page-footer__copyright-link:hover .page-footer__copyright-logo {
+  fill: $copyright-logo-hover-color;
 }

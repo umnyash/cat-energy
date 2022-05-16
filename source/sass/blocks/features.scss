@@ -1,4 +1,109 @@
+.features {
+  padding: 22px 0 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid $features-section-border-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 19px;
+    border-bottom: none;
+  }
+}
+
+.features__heading {
+  margin: 0 0 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
 .features__list {
-  list-style: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  row-gap: 20px;
   color: $text-color-additional;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 87px;
+    column-gap: 60px;
+    counter-reset: features;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.features__item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 245px;
+    min-height: 230px;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: auto;
+    row-gap: 32px;
+    align-items: start;
+    counter-increment: features;
+  }
+}
+
+.features__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: $background-color-accent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item::after {
+  @media (min-width: $tablet-width) {
+    content: counter(features);
+    position: absolute;
+    z-index: -1;
+    top: -39px;
+    right: 0;
+    width: 140px;
+    text-align: center;
+    font-family: $primary-font-family;
+    font-size: 280px;
+    line-height: 280px;
+    color: $features-counter-text-color;
+  }
+}
+
+.features__item--leaf::before {
+  background-image: url("../img/icons/leaf.svg");
+}
+
+.features__item--glass::before {
+  background-image: url("../img/icons/glass.svg");
+}
+
+.features__item--utensil::before {
+  background-image: url("../img/icons/utensil.svg");
+}
+
+.features__item--clock::before {
+  background-image: url("../img/icons/clock.svg");
 }

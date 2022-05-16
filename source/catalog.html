@@ -12,20 +12,20 @@
     <title>Cat Energy: Каталог продукции</title>
   </head>
   <body class="page__body">
-    <header class="page__header page-header">
+    <header class="page__header page-header page-header--nojs"> <!-- page-header--nojs -->
       <div class="page-header__container container">
         <a class="page-header__logo" href="index.html">
-          <picture>
+          <picture class="page-header__logo-image-wrapper">
             <source media="(min-width: 1360px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="page-header__logo-image" src="img/logo.svg" alt="Логотип: нарисованный белый кот в красной маске и красном плаще на фоне оранжевого солнца, справа надпись CAT ENERGY.">
           </picture>
         </a>
-        <button class="page-header__toggler" type="button">
+        <button class="page-header__toggler" type="button"> <!-- page-header__toggler--close -->
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <nav class="page-header__navigation">
-          <ul class="site-navigation">
+        <nav class="page-header__navigation"> <!-- page-header__navigation--close -->
+          <ul class="page-header__navigation-list site-navigation">
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="index.html">Главная</a>
             </li>
@@ -40,269 +40,277 @@
       </div>
     </header>
     <main>
-      <h1 class="page__heading heading">Каталог продукции <span class="visually-hidden">«Cat Energy»</span></h1>
+      <div class="container">
+        <h1 class="page__heading heading">Каталог продукции <span class="visually-hidden">«Cat Energy»</span></h1>
+      </div>
       <section class="catalog">
-        <h2 class="visually-hidden">Основная продукция</h2>
-        <table class="price-list">
-          <thead class="visually-hidden">
-            <tr>
-              <th scope="col">Название</th>
-              <th scope="col">Фото</th>
-              <th scope="col">Масса</th>
-              <th scope="col">Вкус</th>
-              <th scope="col">Цена</th>
-              <th scope="col">Действие</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-pro-chicken-500g@86w.webp 86w, files/cat-energy-pro-chicken-500g@172w.webp 172w, files/cat-energy-pro-chicken-500g@258w.webp 258w, files/cat-energy-pro-chicken-500g@344w.webp 344w, files/cat-energy-pro-chicken-500g@516w.webp 516w, files/cat-energy-pro-chicken-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-pro-chicken-500g@86w.png" srcset="files/cat-energy-pro-chicken-500g@86w.png 86w, files/cat-energy-pro-chicken-500g@172w.png 172w, files/cat-energy-pro-chicken-500g@258w.png 258w, files/cat-energy-pro-chicken-500g@344w.png 344w, files/cat-energy-pro-chicken-500g@516w.png 516w, files/cat-energy-pro-chicken-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в оранжевых тонах с изображением курятины и надписями: Cat Energy Pro, курица, 500 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 500&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Курица
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-pro-chicken-1000g@86w.webp 86w, files/cat-energy-pro-chicken-1000g@172w.webp 172w, files/cat-energy-pro-chicken-1000g@258w.webp 258w, files/cat-energy-pro-chicken-1000g@344w.webp 344w, files/cat-energy-pro-chicken-1000g@516w.webp 516w, files/cat-energy-pro-chicken-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-pro-chicken-1000g@86w.png" srcset="files/cat-energy-pro-chicken-1000g@86w.png 86w, files/cat-energy-pro-chicken-1000g@172w.png 172w, files/cat-energy-pro-chicken-1000g@258w.png 258w, files/cat-energy-pro-chicken-1000g@344w.png 344w, files/cat-energy-pro-chicken-1000g@516w.png 516w, files/cat-energy-pro-chicken-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в оранжевых тонах с изображением курятины и надписями: Cat Energy Pro, курица, 1000 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 1000&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Курица
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-pro-fish-500g@86w.webp 86w, files/cat-energy-pro-fish-500g@172w.webp 172w, files/cat-energy-pro-fish-500g@258w.webp 258w, files/cat-energy-pro-fish-500g@344w.webp 344w, files/cat-energy-pro-fish-500g@516w.webp 516w, files/cat-energy-pro-fish-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-pro-fish-500g@86w.png" srcset="files/cat-energy-pro-fish-500g@86w.png 86w, files/cat-energy-pro-fish-500g@172w.png 172w, files/cat-energy-pro-fish-500g@258w.png 258w, files/cat-energy-pro-fish-500g@344w.png 344w, files/cat-energy-pro-fish-500g@516w.png 516w, files/cat-energy-pro-fish-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в зелёных тонах с изображением филе рыбы и надписями: Cat Energy Pro, Рыба, 500 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 500&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Рыба
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-pro-fish-1000g@86w.webp 86w, files/cat-energy-pro-fish-1000g@172w.webp 172w, files/cat-energy-pro-fish-1000g@258w.webp 258w, files/cat-energy-pro-fish-1000g@344w.webp 344w, files/cat-energy-pro-fish-1000g@516w.webp 516w, files/cat-energy-pro-fish-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-pro-fish-1000g@86w.png" srcset="files/cat-energy-pro-fish-1000g@86w.png 86w, files/cat-energy-pro-fish-1000g@172w.png 172w, files/cat-energy-pro-fish-1000g@258w.png 258w, files/cat-energy-pro-fish-1000g@344w.png 344w, files/cat-energy-pro-fish-1000g@516w.png 516w, files/cat-energy-pro-fish-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в зелёных тонах с изображением филе рыбы и надписями: Cat Energy Pro, Рыба, 1000 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 1000&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Рыба
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-slim-buckwheat-500g@86w.webp 86w, files/cat-energy-slim-buckwheat-500g@172w.webp 172w, files/cat-energy-slim-buckwheat-500g@258w.webp 258w, files/cat-energy-slim-buckwheat-500g@344w.webp 344w, files/cat-energy-slim-buckwheat-500g@516w.webp 516w, files/cat-energy-slim-buckwheat-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-slim-buckwheat-500g@86w.png" srcset="files/cat-energy-slim-buckwheat-500g@86w.png 86w, files/cat-energy-slim-buckwheat-500g@172w.png 172w, files/cat-energy-slim-buckwheat-500g@258w.png 258w, files/cat-energy-slim-buckwheat-500g@344w.png 344w, files/cat-energy-slim-buckwheat-500g@516w.png 516w, files/cat-energy-slim-buckwheat-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в голубых тонах с изображением гречневой каши и надписями: Cat Energy Slim, Гречка, 500 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 500&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Гречка
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 400&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Slim 1000&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-slim-buckwheat-1000g@86w.webp 86w, files/cat-energy-slim-buckwheat-1000g@172w.webp 172w, files/cat-energy-slim-buckwheat-1000g@258w.webp 258w, files/cat-energy-slim-buckwheat-1000g@344w.webp 344w, files/cat-energy-slim-buckwheat-1000g@516w.webp 516w, files/cat-energy-slim-buckwheat-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-slim-buckwheat-1000g@86w.png" srcset="files/cat-energy-slim-buckwheat-1000g@86w.png 86w, files/cat-energy-slim-buckwheat-1000g@172w.png 172w, files/cat-energy-slim-buckwheat-1000g@258w.png 258w, files/cat-energy-slim-buckwheat-1000g@344w.png 344w, files/cat-energy-slim-buckwheat-1000g@516w.png 516w, files/cat-energy-slim-buckwheat-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в голубых тонах с изображением гречневой каши и надписями: Cat Energy Slim, Гречка, 1000 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 1000&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Гречка
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__item">
-              <th class="price-list__name" scope="row">
-                <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
-              </th>
-              <td>
-                <a href="#!">
-                  <picture>
-                    <source type="image/webp" srcset="files/cat-energy-slim-rice-500g@86w.webp 86w, files/cat-energy-slim-rice-500g@172w.webp 172w, files/cat-energy-slim-rice-500g@258w.webp 258w, files/cat-energy-slim-rice-500g@344w.webp 344w, files/cat-energy-slim-rice-500g@516w.webp 516w, files/cat-energy-slim-rice-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
-                    <img src="files/cat-energy-slim-rice-500g@86w.png" srcset="files/cat-energy-slim-rice-500g@86w.png 86w, files/cat-energy-slim-rice-500g@172w.png 172w, files/cat-energy-slim-rice-500g@258w.png 258w, files/cat-energy-slim-rice-500g@344w.png 344w, files/cat-energy-slim-rice-500g@516w.png 516w, files/cat-energy-slim-rice-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в сиреневых тонах с изображением рисовой каши и надписями: Cat Energy Slim, Рис, 500 г.">
-                  </picture>
-                </a>
-              </td>
-              <td>
-                <span aria-hidden="true">Масса</span> 500&nbsp;г
-              </td>
-              <td>
-                <span aria-hidden="true">Вкус</span> Рис
-              </td>
-              <td>
-                <span aria-hidden="true">Цена</span> 500&nbsp;&#8381;
-              </td>
-              <td>
-                <a class="price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="price-list__info">
-              <th class="price-list__info-heading" scope="row" colspan="2">Показать ещё 100500 товаров</th>
-              <td class="price-list__info-text" colspan="3">На самом деле вкусов гораздо больше!</td>
-              <td>
-                <a class="price-list__info-button button button--secondary" href="#!">Показать все</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="catalog__container container">
+          <h2 class="visually-hidden">Основная продукция</h2>
+          <table class="catalog__table price-list">
+            <thead class="visually-hidden">
+              <tr>
+                <th scope="col">Название</th>
+                <th scope="col">Фото</th>
+                <th scope="col">Масса</th>
+                <th scope="col">Вкус</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Действие</th>
+              </tr>
+            </thead>
+            <tbody class="price-list__items">
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-pro-chicken-500g@86w.webp 86w, files/cat-energy-pro-chicken-500g@172w.webp 172w, files/cat-energy-pro-chicken-500g@258w.webp 258w, files/cat-energy-pro-chicken-500g@344w.webp 344w, files/cat-energy-pro-chicken-500g@516w.webp 516w, files/cat-energy-pro-chicken-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-pro-chicken-500g@86w.png" srcset="files/cat-energy-pro-chicken-500g@86w.png 86w, files/cat-energy-pro-chicken-500g@172w.png 172w, files/cat-energy-pro-chicken-500g@258w.png 258w, files/cat-energy-pro-chicken-500g@344w.png 344w, files/cat-energy-pro-chicken-500g@516w.png 516w, files/cat-energy-pro-chicken-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в оранжевых тонах с изображением курятины и надписями: Cat Energy Pro, курица, 500 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 500&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Курица
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-pro-chicken-1000g@86w.webp 86w, files/cat-energy-pro-chicken-1000g@172w.webp 172w, files/cat-energy-pro-chicken-1000g@258w.webp 258w, files/cat-energy-pro-chicken-1000g@344w.webp 344w, files/cat-energy-pro-chicken-1000g@516w.webp 516w, files/cat-energy-pro-chicken-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-pro-chicken-1000g@86w.png" srcset="files/cat-energy-pro-chicken-1000g@86w.png 86w, files/cat-energy-pro-chicken-1000g@172w.png 172w, files/cat-energy-pro-chicken-1000g@258w.png 258w, files/cat-energy-pro-chicken-1000g@344w.png 344w, files/cat-energy-pro-chicken-1000g@516w.png 516w, files/cat-energy-pro-chicken-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в оранжевых тонах с изображением курятины и надписями: Cat Energy Pro, курица, 1000 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 1000&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Курица
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Pro 500&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-pro-fish-500g@86w.webp 86w, files/cat-energy-pro-fish-500g@172w.webp 172w, files/cat-energy-pro-fish-500g@258w.webp 258w, files/cat-energy-pro-fish-500g@344w.webp 344w, files/cat-energy-pro-fish-500g@516w.webp 516w, files/cat-energy-pro-fish-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-pro-fish-500g@86w.png" srcset="files/cat-energy-pro-fish-500g@86w.png 86w, files/cat-energy-pro-fish-500g@172w.png 172w, files/cat-energy-pro-fish-500g@258w.png 258w, files/cat-energy-pro-fish-500g@344w.png 344w, files/cat-energy-pro-fish-500g@516w.png 516w, files/cat-energy-pro-fish-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в зелёных тонах с изображением филе рыбы и надписями: Cat Energy Pro, Рыба, 500 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 500&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Рыба
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Pro 1000&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-pro-fish-1000g@86w.webp 86w, files/cat-energy-pro-fish-1000g@172w.webp 172w, files/cat-energy-pro-fish-1000g@258w.webp 258w, files/cat-energy-pro-fish-1000g@344w.webp 344w, files/cat-energy-pro-fish-1000g@516w.webp 516w, files/cat-energy-pro-fish-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-pro-fish-1000g@86w.png" srcset="files/cat-energy-pro-fish-1000g@86w.png 86w, files/cat-energy-pro-fish-1000g@172w.png 172w, files/cat-energy-pro-fish-1000g@258w.png 258w, files/cat-energy-pro-fish-1000g@344w.png 344w, files/cat-energy-pro-fish-1000g@516w.png 516w, files/cat-energy-pro-fish-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в зелёных тонах с изображением филе рыбы и надписями: Cat Energy Pro, Рыба, 1000 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 1000&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Рыба
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 1000&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-slim-buckwheat-500g@86w.webp 86w, files/cat-energy-slim-buckwheat-500g@172w.webp 172w, files/cat-energy-slim-buckwheat-500g@258w.webp 258w, files/cat-energy-slim-buckwheat-500g@344w.webp 344w, files/cat-energy-slim-buckwheat-500g@516w.webp 516w, files/cat-energy-slim-buckwheat-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-slim-buckwheat-500g@86w.png" srcset="files/cat-energy-slim-buckwheat-500g@86w.png 86w, files/cat-energy-slim-buckwheat-500g@172w.png 172w, files/cat-energy-slim-buckwheat-500g@258w.png 258w, files/cat-energy-slim-buckwheat-500g@344w.png 344w, files/cat-energy-slim-buckwheat-500g@516w.png 516w, files/cat-energy-slim-buckwheat-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в голубых тонах с изображением гречневой каши и надписями: Cat Energy Slim, Гречка, 500 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 500&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Гречка
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 400&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Slim 1000&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-slim-buckwheat-1000g@86w.webp 86w, files/cat-energy-slim-buckwheat-1000g@172w.webp 172w, files/cat-energy-slim-buckwheat-1000g@258w.webp 258w, files/cat-energy-slim-buckwheat-1000g@344w.webp 344w, files/cat-energy-slim-buckwheat-1000g@516w.webp 516w, files/cat-energy-slim-buckwheat-1000g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-slim-buckwheat-1000g@86w.png" srcset="files/cat-energy-slim-buckwheat-1000g@86w.png 86w, files/cat-energy-slim-buckwheat-1000g@172w.png 172w, files/cat-energy-slim-buckwheat-1000g@258w.png 258w, files/cat-energy-slim-buckwheat-1000g@344w.png 344w, files/cat-energy-slim-buckwheat-1000g@516w.png 516w, files/cat-energy-slim-buckwheat-1000g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Большой стакан в голубых тонах с изображением гречневой каши и надписями: Cat Energy Slim, Гречка, 1000 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 1000&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Гречка
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 700&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__item">
+                <th class="price-list__name" scope="row">
+                  <a class="price-list__name-link" href="#!">Cat Energy Slim 500&nbsp;г</a>
+                </th>
+                <td class="price-list__image-wrapper">
+                  <a class="price-list__image-link" href="#!">
+                    <picture>
+                      <source type="image/webp" srcset="files/cat-energy-slim-rice-500g@86w.webp 86w, files/cat-energy-slim-rice-500g@172w.webp 172w, files/cat-energy-slim-rice-500g@258w.webp 258w, files/cat-energy-slim-rice-500g@344w.webp 344w, files/cat-energy-slim-rice-500g@516w.webp 516w, files/cat-energy-slim-rice-500g@688w.webp 688w" sizes="(min-width: 768px) 172px, 86px">
+                      <img class="price-list__image" src="files/cat-energy-slim-rice-500g@86w.png" srcset="files/cat-energy-slim-rice-500g@86w.png 86w, files/cat-energy-slim-rice-500g@172w.png 172w, files/cat-energy-slim-rice-500g@258w.png 258w, files/cat-energy-slim-rice-500g@344w.png 344w, files/cat-energy-slim-rice-500g@516w.png 516w, files/cat-energy-slim-rice-500g@688w.png 688w" sizes="(min-width: 768px) 172px, 86px" alt="Cтаканчик в сиреневых тонах с изображением рисовой каши и надписями: Cat Energy Slim, Рис, 500 г.">
+                    </picture>
+                  </a>
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Масса</span> 500&nbsp;г
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Вкус</span> Рис
+                </td>
+                <td class="price-list__detail">
+                  <span aria-hidden="true">Цена</span> 500&nbsp;&#8381;
+                </td>
+                <td class="price-list__button-wrapper">
+                  <a class="price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="price-list__info">
+                <th class="price-list__info-heading" scope="row" colspan="2">Показать ещё 100500 товаров</th>
+                <td class="price-list__info-text" colspan="3">На самом деле вкусов гораздо больше!</td>
+                <td class="price-list__info-button-wrapper">
+                  <a class="price-list__info-button button button--secondary" href="#!">Показать все</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <section class="extra-catalog">
-        <h2 class="heading heading--small">Дополнительные товары</h2>
-        <table class="extra-price-list">
-          <thead class="visually-hidden">
-            <tr>
-              <th scope="col">Название</th>
-              <th scope="col">Масса/Объём</th>
-              <th scope="col">Цена</th>
-              <th scope="col">Действие</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="extra-price-list__item">
-              <th class="extra-price-list__name" scope="row">
-                <a class="extra-price-list__name-link" href="#!">Сахарозаменитель</a>
-              </th>
-              <td>1 упаковка (100&nbsp;г)</td>
-              <td>200&nbsp;&#8381;</td>
-              <td>
-                <a class="extra-price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="extra-price-list__item">
-              <th class="extra-price-list__name" scope="row">
-                <a class="extra-price-list__name-link" href="#!">Питьевая вода</a>
-              </th>
-              <td>5 литров</td>
-              <td>50&nbsp;&#8381;</td>
-              <td>
-                <a class="extra-price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="extra-price-list__item">
-              <th class="extra-price-list__name" scope="row">
-                <a class="extra-price-list__name-link" href="#!">Молоко</a>
-              </th>
-              <td>1 литр</td>
-              <td>100&nbsp;&#8381;</td>
-              <td>
-                <a class="extra-price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-            <tr class="extra-price-list__item">
-              <th class="extra-price-list__name" scope="row">
-                <a class="extra-price-list__name-link" href="#!">Витамины</a>
-              </th>
-              <td>1 упаковка (30&nbsp;г)</td>
-              <td>300&nbsp;&#8381;</td>
-              <td>
-                <a class="extra-price-list__button button" href="#!">Заказать</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="notice">Закажите всё и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
+        <div class="extra-catalog__container container">
+          <h2 class="extra-catalog__heading heading heading--small heading--decorative">
+            <span class="heading__text">Дополнительные товары</span>
+          </h2>
+          <table class="extra-catalog__table extra-price-list">
+            <thead class="visually-hidden">
+              <tr>
+                <th scope="col">Название</th>
+                <th scope="col">Масса/Объём</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Действие</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="extra-price-list__item">
+                <th class="extra-price-list__name" scope="row">
+                  <a class="extra-price-list__name-link" href="#!">Сахарозаменитель</a>
+                </th>
+                <td class="extra-price-list__detail">1 упаковка (100&nbsp;г)</td>
+                <td class="extra-price-list__detail">200&nbsp;&#8381;</td>
+                <td class="extra-price-list__button-wrapper">
+                  <a class="extra-price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="extra-price-list__item">
+                <th class="extra-price-list__name" scope="row">
+                  <a class="extra-price-list__name-link" href="#!">Питьевая вода</a>
+                </th>
+                <td class="extra-price-list__detail">5 литров</td>
+                <td class="extra-price-list__detail">50&nbsp;&#8381;</td>
+                <td class="extra-price-list__button-wrapper">
+                  <a class="extra-price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="extra-price-list__item">
+                <th class="extra-price-list__name" scope="row">
+                  <a class="extra-price-list__name-link" href="#!">Молоко</a>
+                </th>
+                <td class="extra-price-list__detail">1 литр</td>
+                <td class="extra-price-list__detail">100&nbsp;&#8381;</td>
+                <td class="extra-price-list__button-wrapper">
+                  <a class="extra-price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+              <tr class="extra-price-list__item">
+                <th class="extra-price-list__name" scope="row">
+                  <a class="extra-price-list__name-link" href="#!">Витамины</a>
+                </th>
+                <td class="extra-price-list__detail">1 упаковка (30&nbsp;г)</td>
+                <td class="extra-price-list__detail">300&nbsp;&#8381;</td>
+                <td class="extra-price-list__button-wrapper">
+                  <a class="extra-price-list__button button" href="#!">Заказать</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="extra-catalog__notice notice">Закажите всё и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
+        </div>
       </section>
     </main>
     <footer class="page__footer page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__card">
+        <div class="contacts__card contacts__card--alter">
           <p class="contacts__lead">Приглашаем<br> к&nbsp;сотрудничеству<br> дилеров!</p>
-          <address class="contacts__text">
+          <address class="contacts__text contacts__text--address">
             <span class="contacts__text-part">Санкт-Петербург</span> ул.&nbsp;Большая<br> Конюшенная, д.&nbsp;19/8
           </address>
         </div>
@@ -316,34 +324,38 @@
         </picture>
       </section>
       <div class="page-footer__container container">
-        <a class="page-footer__logo" href="index.html">
-          <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24" alt="Логотип: надпись CAT ENERGY.">
-        </a>
-        <ul class="page-footer__socials socials">
-          <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-        </ul>
-        <p class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <span class="copyright__name">HTML Academy</span>
-            <svg class="copyright__logo" role="img" width="27" height="34" aria-label="Логотип HTML-академии в виде квадратной академической шапочки.">
+        <div class="page-footer__item">
+          <a class="page-footer__logo" href="index.html">
+            <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24" alt="Логотип: надпись CAT ENERGY.">
+          </a>
+        </div>
+        <div class="page-footer__item">
+          <ul class="page-footer__socials socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__item page-footer__item--align--right">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <span class="page-footer__copyright-name">HTML Academy</span>
+            <svg class="page-footer__copyright-logo" role="img" width="27" height="34" aria-label="Логотип HTML-академии в виде квадратной академической шапочки.">
               <use xlink:href="img/sprite.svg#copyright-logo"></use>
             </svg>
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   </body>

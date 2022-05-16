@@ -1,3 +1,92 @@
 .socials {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+}
+
+.socials__item {
+  margin: 8px 18px;
+
+  @media (min-width: $tablet-width) {
+    margin: 10px 14px;
+  }
+}
+
+.socials__link {
+  position: relative;
+  display: block;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: outline-color;
+  transition-duration: $animation-duration;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $socials-icon-color;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition-property: background-color, opacity;
+    transition-duration: $animation-duration;
+  }
+
+  &:focus-visible {
+    outline-color: $text-color-additional;
+  }
+}
+
+.socials__link--vk::after {
+  width: 23px;
+  height: 13px;
+  mask-image: url("../img/icons/vk.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 29px;
+    height: 18px;
+  }
+}
+
+.socials__link--instagram::after {
+  width: 16px;
+  height: 16px;
+  mask-image: url("../img/icons/instagram.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.socials__link--facebook::after {
+  width: 10px;
+  height: 20px;
+  mask-image: url("../img/icons/facebook.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 15px;
+    height: 29px;
+  }
+}
+
+.socials__link:hover::after {
+  background-color: $background-color-accent;
+}
+
+.socials__link:active::after {
+  background-color: $background-color-accent;
+  opacity: 0.3;
 }

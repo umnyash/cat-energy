@@ -1,6 +1,113 @@
 .notice {
+  --notice-background-image: url("../img/backgrounds/cat-case.jpg");
+
+  display: grid;
+  box-sizing: border-box;
+  min-height: 290px;
+  padding: 50px 48px 28px;
+  grid-template-rows: min-content auto;
+  align-content: space-around;
+  justify-items: center;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: $text-color-secondary;
   background-color: $background-color-accent;
+  background-image:
+    linear-gradient(fade-out($background-color-accent, 0.15), fade-out($background-color-accent, 0.15)),
+    var(--notice-background-image);
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    min-height: 200px;
+    padding: 32px 102px 32px 89px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 184px;
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media (min-resolution: 2dppx) {
+    --notice-background-image: url("../img/backgrounds/cat-case@2x.jpg");
+  }
+
+  @media (min-resolution: 3dppx) {
+    --notice-background-image: url("../img/backgrounds/cat-case@3x.jpg");
+  }
+
+  @media (min-resolution: 4dppx) {
+    --notice-background-image: url("../img/backgrounds/cat-case@4x.jpg");
+  }
+
+  @media (min-width: $mobile-min-width-greater) {
+    --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@2x.jpg");
+    }
+
+    @media (min-resolution: 3dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@3x.jpg");
+    }
+
+    @media (min-resolution: 4dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@4x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    --notice-background-image: url("../img/backgrounds/cat-case-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-tablet@2x.jpg");
+    }
+
+    @media (min-resolution: 3dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-tablet@3x.jpg");
+    }
+
+    @media (min-resolution: 4dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-tablet@4x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-min-width-greater) {
+    --notice-background-image: url("../img/backgrounds/cat-case-tablet@2x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-tablet@4x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    --notice-background-image: url("../img/backgrounds/cat-case-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-desktop@2x.jpg");
+    }
+
+    @media (min-resolution: 3dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-desktop@3x.jpg");
+    }
+
+    @media (min-resolution: 4dppx) {
+      --notice-background-image: url("../img/backgrounds/cat-case-desktop@4x.jpg");
+    }
+  }
+}
+
+.notice::before {
+  content: "";
+  width: 58px;
+  height: 62px;
+  margin-bottom: 35px;
+  background-image: url("../img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }

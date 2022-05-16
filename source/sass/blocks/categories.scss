@@ -1,3 +1,23 @@
+.categories {
+  @media (min-width: $desktop-width) {
+    padding-top: 81px;
+  }
+}
+
 .categories__list {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  row-gap: 20px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 80px;
+  }
 }

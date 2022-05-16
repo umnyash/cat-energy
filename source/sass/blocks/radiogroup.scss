@@ -1,0 +1,52 @@
+.radiogroup {
+  position: relative;
+  padding: 23px 0 19px;
+  outline: 2px solid transparent;
+  outline-offset: -1px;
+  transition-property: outline-color;
+  transition-duration: $animation-duration;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 28px;
+    border: 1px solid $form-control-border-color-1;
+  }
+}
+
+.radiogroup:focus-within {
+  @media (min-width: $tablet-width) {
+    outline-color: $text-color-additional;
+  }
+}
+
+.radiogroup::before,
+.radiogroup::after {
+  @media (max-width: $mobile-max-width) {
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    height: 1px;
+    background-color: $form-group-border-color;
+  }
+}
+
+.radiogroup:focus-within::before,
+.radiogroup:focus-within::after {
+  @media (max-width: $mobile-max-width) {
+    height: 2px;
+    background-color: $text-color-additional;
+  }
+}
+
+.radiogroup::before {
+  top: 0;
+}
+
+.radiogroup::after {
+  bottom: 0;
+}
+
+.radiogroup__fields {
+  display: grid;
+  row-gap: 13px;
+}

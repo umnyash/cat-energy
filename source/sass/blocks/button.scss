@@ -1,14 +1,26 @@
 .button {
-  font-family: "Oswald", "Arial", sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 8px 20px;
+  border: none;
+  text-align: center;
+  font-family: $primary-font-family;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
   text-decoration: none;
   color: $text-color-secondary;
   background-color: $background-color-accent;
+  outline: 2px solid transparent;
+  transition-property: color, background-color, outline-color;
+  transition-duration: $animation-duration;
 
   &:hover {
     background-color: $button-hover-background-color;
+  }
+
+  &:focus-visible {
+    outline-color: $text-color-additional;
   }
 
   &:active {
@@ -32,6 +44,12 @@
 }
 
 .button--adaptive {
+  padding: 10px 27px;
   font-size: inherit;
   line-height: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
 }

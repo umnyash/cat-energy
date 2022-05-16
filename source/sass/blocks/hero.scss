@@ -1,19 +1,183 @@
 .hero {
-  font-family: "Oswald", "Arial", sans-serif;
+  position: relative;
+  padding: 27px 0 20px;
+  text-align: center;
+  font-family: $primary-font-family;
   font-size: 14px;
   line-height: 20px;
-  background-color: $background-color-accent;
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $mobile-max-width) {
     color: $text-color-secondary;
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 0;
     font-size: 20px;
     line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    min-height: 554px;
+    padding-top: 0;
+  }
+}
+
+.hero::before {
+  --hero-background-image: url("../img/backgrounds/hero-background.jpg");
+
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 302px;
+  background-image:
+    linear-gradient(fade-out($background-color-accent, 0.15), fade-out($background-color-accent, 0.15)),
+    var(--hero-background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $mobile-min-width-greater) {
+    --hero-background-image: url("../img/backgrounds/hero-background-wide-mobile.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    --hero-background-image: url("../img/backgrounds/hero-background@2x.jpg");
+
+    @media (min-width: $mobile-min-width-greater) {
+      --hero-background-image: url("../img/backgrounds/hero-background-wide-mobile@2x.jpg");
+    }
+  }
+
+  @media (min-resolution: 3dppx) {
+    --hero-background-image: url("../img/backgrounds/hero-background@3x.jpg");
+
+    @media (min-width: $mobile-min-width-greater) {
+      --hero-background-image: url("../img/backgrounds/hero-background-wide-mobile@3x.jpg");
+    }
+  }
+
+  @media (min-resolution: 4dppx) {
+    --hero-background-image: url("../img/backgrounds/hero-background@4x.jpg");
+
+    @media (min-width: $mobile-min-width-greater) {
+      --hero-background-image: url("../img/backgrounds/hero-background-wide-mobile@4x.jpg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 50%;
+    display: block;
+    height: 694px;
+    --hero-background-image: url("../img/backgrounds/hero-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --hero-background-image: url("../img/backgrounds/hero-background-desktop@2x.jpg");
+    }
+
+    @media (min-resolution: 3dppx) {
+      --hero-background-image: url("../img/backgrounds/hero-background-desktop@3x.jpg");
+    }
+
+    @media (min-resolution: 4dppx) {
+      --hero-background-image: url("../img/backgrounds/hero-background-desktop@4x.jpg");
+    }
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    --hero-background-image: url("../img/backgrounds/hero-background-desktop@2x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      --hero-background-image: url("../img/backgrounds/hero-background-desktop@4x.jpg");
+    }
+  }
+}
+
+.hero__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      "row-1"
+      "row-2";
+    justify-items: start;
+    align-items: start;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.hero__header {
+  margin: 0 0 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 84px;
+    margin-left: 84px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 82px;
+  }
+}
+
+.hero__heading {
+  margin: 0 0 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 37px;
   }
 }
 
 .hero__slogan {
+  margin: 0 0 12px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.hero__image-wrapper {
+  display: block;
+  margin: 0 0 3px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: row-2;
+    justify-self: center;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+    transform: translateX(-191px);
+  }
+}
+
+.hero__image {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero__link {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-area: row-2;
+    width: auto;
+    margin: 29px 0 0 87px;
+  }
 }

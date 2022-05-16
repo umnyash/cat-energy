@@ -1,0 +1,57 @@
+.checkbox {
+  display: block;
+}
+
+.checkbox__label {
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 30px 1fr;
+  column-gap: 16px;
+  grid-template-areas: "checkbox label";
+  align-items: center;
+
+  &::before {
+    content: "";
+    grid-area: checkbox;
+    place-self: stretch;
+    border: 1px solid $form-control-border-color-2;
+    outline: 2px solid transparent;
+    outline-offset: -1px;
+    transition-property: border-color, outline-color;
+    transition-duration: $animation-duration;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: 40px;
+    grid-template-columns: 40px 1fr;
+    column-gap: 19px;
+  }
+}
+
+.checkbox__control:enabled + .checkbox__label:hover::before {
+  border-color: $checkbox-border-alter-color;
+}
+
+.checkbox__control:focus-within + .checkbox__label::before {
+  outline-color: $text-color-additional;
+}
+
+.checkbox__control:checked + .checkbox__label::after {
+  content: "";
+  grid-area: checkbox;
+  place-self: center;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icons/checkmark.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+.checkbox__control:disabled + .checkbox__label {
+  opacity: 0.3;
+}

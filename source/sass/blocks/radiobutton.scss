@@ -1,3 +1,55 @@
 .radiobutton {
+  display: inline-block;
   color: $radiobutton-label-text-color;
 }
+
+.radiobutton__label {
+  display: grid;
+  grid-template-rows: 30px;
+  grid-template-columns: 30px 1fr;
+  column-gap: 15px;
+  grid-template-areas: "radio label";
+  align-items: center;
+
+  &::before {
+    content: "";
+    grid-area: radio;
+    place-self: stretch;
+    border: 1px solid $form-control-border-color-2;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: 40px;
+    grid-template-columns: 40px 1fr;
+    column-gap: 20px;
+  }
+}
+
+.radiobutton__control:enabled:not(:checked) + .radiobutton__label:hover::before {
+  border-color: $radiobutton-border-alter-color;
+}
+
+.radiobutton__control:checked + .radiobutton__label::after{
+  content: "";
+  grid-area: radio;
+  place-self: center;
+  width: 48%;
+  height: 48%;
+  border-radius: 50%;
+  background-color: $background-color-accent;
+
+  @media (min-width: $tablet-width) {
+    width: 45%;
+    height: 45%;
+  }
+}
+
+.radiobutton__control:disabled + .radiobutton__label {
+  opacity: 0.3;
+}
+
+// .radiobutton__control:focus-visible + .radiobutton__label {
+//   outline: 2px solid $text-color-additional;
+//   outline-offset: -1px;
+// }

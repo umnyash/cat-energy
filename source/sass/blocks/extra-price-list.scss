@@ -1,12 +1,65 @@
 .extra-price-list {
+  border-collapse: collapse;
+  color: $text-color-additional;
+
   @media (min-width: $tablet-width) {
+    border: 1px solid $extra-price-list-item-border-color;
+    border-top: none;
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
+}
+
+.extra-price-list__item {
+  position: relative;
+  display: grid;
+  padding: 12px 0 18px;
+  grid-template-columns: 1fr auto;
+  row-gap: 9px;
+  column-gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 37px 27px;
+    grid-template-columns: 1fr auto auto;
+    row-gap: 18px;
+    column-gap: 54px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 0 15px;
+    grid-template-columns: 285px 1fr auto auto;
+    column-gap: 40px;
+  }
+}
+
+.extra-price-list__item::before,
+.extra-price-list__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-color: $extra-price-list-item-border-color;
+}
+
+.extra-price-list__item::before {
+  top: 0px;
+}
+
+.extra-price-list__item::after {
+  bottom: -1px;
 }
 
 .extra-price-list__name {
-  font-family: "Oswald", "Arial", sans-serif;
+  grid-column: 1 / -1;
+  padding: 0;
+  text-align: left;
+  font-family: $primary-font-family;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -14,6 +67,7 @@
   color: $extra-price-list-name-color;
 
   @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
     font-size: 20px;
     line-height: 24px;
   }
@@ -22,12 +76,40 @@
 .extra-price-list__name-link {
   text-decoration: none;
   color: inherit;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: opacity, outline-color;
+  transition-duration: $animation-duration;
 
   &:hover {
     opacity: 0.6;
   }
 
+  &:focus-visible {
+    outline-color: $text-color-additional;
+  }
+
   &:active {
     opacity: 0.3;
   }
+}
+
+.extra-price-list__detail {
+  padding: 0;
+}
+
+.extra-price-list__button-wrapper {
+  grid-column: 1 / -1;
+  padding: 0;
+  margin: 4px 0 0;
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+    min-width: 244px;
+    margin-top: 0;
+  }
+}
+
+.extra-price-list__button {
+  width: 100%;
 }

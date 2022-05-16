@@ -1,15 +1,82 @@
 .textfield {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   color: $text-color-additional;
 }
 
+[class*="textfield--icon--"] {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.7em;
+    right: 0.9em;
+    width: 20px;
+    height: 21px;
+    background-color: $textfield-icon-color;
+    mask-repeat: no-repeat;
+    mask-position: left center;
+    transition-property: background-color;
+    transition-duration: $animation-duration;
+  }
+
+  &:focus-within::after {
+    background-color: $background-color-accent;
+  }
+}
+
+.textfield--error::after {
+  background-color: $error-color;
+}
+
+.textfield--icon--email::after {
+  mask-image: url("../img/icons/envelope.svg");
+}
+
+.textfield--icon--phone::after {
+  mask-image: url("../img/icons/phone.svg");
+}
+
+.textfield__label {
+  margin: 8px 16px 8px 0;
+}
+
 .textfield__control {
+  width: 120px;
+  flex-grow: 1;
+  padding: 11px 15px 12px;
+  border: 1px solid $form-control-border-color-1;
   font: inherit;
   color: inherit;
   text-transform: inherit;
   appearance: textfield;
+  outline: 2px solid transparent;
+  outline-offset: -1px;
+  transition-property: border-color, outline-color;
+  transition-duration: $animation-duration;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
   }
+}
+
+[class*="textfield--icon--"] .textfield__control {
+  padding-right: 3em;
+}
+
+.textfield--error .textfield__control {
+  outline-width: 2px;
+  outline-color: $error-color;
+}
+
+.textfield__control:focus {
+  outline-color: $text-color-additional;
+}
+
+.textfield:hover .textfield__control {
+  border-color: $form-control-border-color-2;
+  outline-color: transparent;
 }
