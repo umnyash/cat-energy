@@ -24,6 +24,7 @@ pageHeaderToggler.addEventListener('click', () => {
     pageHeaderToggler.querySelector('span').textContent = 'Открыть меню';
   }
 
+  pageHeaderToggler.classList.toggle('page-header__toggler--close');
   pageHeaderNavigation.classList.toggle('page-header__navigation--close');
 });
 
