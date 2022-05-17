@@ -32,7 +32,7 @@
   border-color: $checkbox-border-alter-color;
 }
 
-.checkbox__control:focus-within + .checkbox__label::before {
+.checkbox__control:focus-visible + .checkbox__label::before {
   outline-color: $text-color-additional;
 }
 
