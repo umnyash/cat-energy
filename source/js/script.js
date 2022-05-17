@@ -1,5 +1,13 @@
 'use strict';
 
+const preloader = document.querySelector('.preloader');
+
+preloader.classList.remove('preloader--nojs');
+
+window.onload = function () {
+  preloader.style.display = 'none';
+}
+
 const pageHeader = document.querySelector('.page-header');
 const pageHeaderNavigation = pageHeader.querySelector('.page-header__navigation');
 const pageHeaderToggler = pageHeader.querySelector('.page-header__toggler');
