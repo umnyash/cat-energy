@@ -34,7 +34,7 @@ DG.then(function () {
   });
 
   let myIcon = DG.icon({
-    iconUrl: '../img/location-pin.png',
+    iconUrl: 'img/location-pin.png',
     iconSize: [50, 100]
 });
 
