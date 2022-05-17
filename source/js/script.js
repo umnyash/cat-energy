@@ -18,3 +18,19 @@ pageHeaderToggler.addEventListener('click', () => {
 
   pageHeaderNavigation.classList.toggle('page-header__navigation--close');
 });
+
+DG.then(function () {
+  let map = DG.map('contacts__interactive-map', {
+    center: [59.93848, 30.321819],
+    zoom: 16
+  });
+
+  let myIcon = DG.icon({
+    iconUrl: '../img/location-pin.png',
+    iconSize: [50, 100]
+});
+
+  DG.marker([59.93848, 30.321819], {
+    icon: myIcon
+  }).addTo(map);
+});
