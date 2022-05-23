@@ -1,12 +1,12 @@
 .container {
   padding: 0 20px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding-right: 30px;
     padding-left: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 1220px;
     padding-right: 40px;
     padding-left: 40px;
@@ -15,7 +15,7 @@
 }
 
 .container--narrow {
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  @media #{$tablet} {
     padding-right: 70px;
     padding-left: 70px;
   }

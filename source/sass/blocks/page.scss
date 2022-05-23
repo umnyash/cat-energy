@@ -5,7 +5,7 @@
 .page__body {
   position: relative;
   display: grid;
-  min-width: $mobile-min-width;
+  min-width: 320px;
   min-height: 100vh;
   margin: 0;
   grid-template-rows: auto 1fr auto;
@@ -16,7 +16,7 @@
   background-color: $background-color;
   overflow-x: hidden;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     font-size: 16px;
     line-height: 24px;
   }
@@ -25,18 +25,18 @@
 .page__heading {
   margin: 28px 0 40px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-top: 41px;
     margin-bottom: 45px
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 47px;
   }
 }
 
 .page__form {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-top: 54px;
   }
 }

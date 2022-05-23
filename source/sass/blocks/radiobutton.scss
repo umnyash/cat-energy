@@ -19,7 +19,7 @@
     border-radius: 50%;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     grid-template-rows: 40px;
     grid-template-columns: 40px 1fr;
     column-gap: 20px;
@@ -39,7 +39,7 @@
   border-radius: 50%;
   background-color: $background-color-accent;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 45%;
     height: 45%;
   }

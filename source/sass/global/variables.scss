@@ -1,14 +1,20 @@
 // Viewports
 
-$mobile-min-width: 320px;
-$mobile-min-width-greater: 321px;
-$narrow-mobile-max-width: 359px;
-$mobile-max-width: 767px;
-$tablet-width: 768px;
-$tablet-min-width-greater: 769px;
-$tablet-max-width: 1359px;
-$desktop-width: 1360px;
-$wide-desktop-width: 1441px;
+$narrow-mobile: "(max-width: 359px)";
+$mobile: "(max-width: 767px)";
+$wide-mobile: "(min-width: 321px) and (max-width: 767px)";
+$mobile-tablet: "(max-width: 1359px)";
+$tablet: "(min-width: 768px) and (max-width: 1359px)";
+$wide-tablet: "(min-width: 769px) and (max-width: 1359px)";
+$tablet-desktop: "(min-width: 768px)";
+$desktop: "(min-width: 1360px)";
+$wide-desktop: "(min-width: 1361px)";
+
+// Retina
+
+$retina-2x: "(min-resolution: 2dppx)";
+$retina-3x: "(min-resolution: 3dppx)";
+$retina-4x: "(min-resolution: 4dppx)";
 
 // Fonts
 

@@ -19,7 +19,7 @@
   background-position: center;
   background-size: cover;
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  @media #{$tablet} {
     min-height: 200px;
     padding: 32px 102px 32px 89px;
     grid-template-rows: auto;
@@ -29,70 +29,70 @@
     text-align: left;
   }
 
-  @media (min-resolution: 2dppx) {
+  @media #{$retina-2x} {
     --notice-background-image: url("../img/backgrounds/cat-case@2x.jpg");
   }
 
-  @media (min-resolution: 3dppx) {
+  @media #{$retina-3x} {
     --notice-background-image: url("../img/backgrounds/cat-case@3x.jpg");
   }
 
-  @media (min-resolution: 4dppx) {
+  @media #{$retina-4x} {
     --notice-background-image: url("../img/backgrounds/cat-case@4x.jpg");
   }
 
-  @media (min-width: $mobile-min-width-greater) {
+  @media #{$wide-mobile} {
     --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile.jpg");
 
-    @media (min-resolution: 2dppx) {
+    @media #{$retina-2x} {
       --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@2x.jpg");
     }
 
-    @media (min-resolution: 3dppx) {
+    @media #{$retina-3x} {
       --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@3x.jpg");
     }
 
-    @media (min-resolution: 4dppx) {
+    @media #{$retina-4x} {
       --notice-background-image: url("../img/backgrounds/cat-case-wide-mobile@4x.jpg");
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     --notice-background-image: url("../img/backgrounds/cat-case-tablet.jpg");
 
-    @media (min-resolution: 2dppx) {
+    @media #{$retina-2x} {
       --notice-background-image: url("../img/backgrounds/cat-case-tablet@2x.jpg");
     }
 
-    @media (min-resolution: 3dppx) {
+    @media #{$retina-3x} {
       --notice-background-image: url("../img/backgrounds/cat-case-tablet@3x.jpg");
     }
 
-    @media (min-resolution: 4dppx) {
+    @media #{$retina-4x} {
       --notice-background-image: url("../img/backgrounds/cat-case-tablet@4x.jpg");
     }
   }
 
-  @media (min-width: $tablet-min-width-greater) {
+  @media #{$wide-tablet} {
     --notice-background-image: url("../img/backgrounds/cat-case-tablet@2x.jpg");
 
-    @media (min-resolution: 2dppx) {
+    @media #{$retina-2x} {
       --notice-background-image: url("../img/backgrounds/cat-case-tablet@4x.jpg");
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     --notice-background-image: url("../img/backgrounds/cat-case-desktop.jpg");
 
-    @media (min-resolution: 2dppx) {
+    @media #{$retina-2x} {
       --notice-background-image: url("../img/backgrounds/cat-case-desktop@2x.jpg");
     }
 
-    @media (min-resolution: 3dppx) {
+    @media #{$retina-3x} {
       --notice-background-image: url("../img/backgrounds/cat-case-desktop@3x.jpg");
     }
 
-    @media (min-resolution: 4dppx) {
+    @media #{$retina-4x} {
       --notice-background-image: url("../img/backgrounds/cat-case-desktop@4x.jpg");
     }
   }
@@ -107,7 +107,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 0;
   }
 }

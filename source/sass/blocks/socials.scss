@@ -10,7 +10,7 @@
 .socials__item {
   margin: 8px 18px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin: 10px 14px;
   }
 }
@@ -54,7 +54,7 @@
   height: 13px;
   mask-image: url("../img/icons/vk.svg");
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 29px;
     height: 18px;
   }
@@ -65,7 +65,7 @@
   height: 16px;
   mask-image: url("../img/icons/instagram.svg");
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 23px;
     height: 23px;
   }
@@ -76,7 +76,7 @@
   height: 20px;
   mask-image: url("../img/icons/facebook.svg");
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 15px;
     height: 29px;
   }

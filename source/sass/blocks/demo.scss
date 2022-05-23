@@ -2,14 +2,14 @@
   padding: 27px 0 35px;
   background-color: $demo-section-background-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding-top: 43px;
     padding-bottom: 52px;
     background-color: transparent;
     background-image: linear-gradient(to top, $demo-section-background-color 462px, transparent 462px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding-top: 17px;
     padding-bottom: 61px;
     background-image: linear-gradient(to bottom, transparent 29.8%, $background-color-secondary 29.8%);
@@ -17,7 +17,7 @@
 }
 
 .demo__container {
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     display: grid;
     grid-template-columns: 36% 1fr;
     column-gap: 190px;
@@ -27,11 +27,11 @@
 .demo__inner {
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 71px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     display: grid;
     margin-bottom: 0;
     grid-template-rows: min-content 1fr min-content;
@@ -41,11 +41,11 @@
 .demo__heading {
   margin: 0 0 42px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 64px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 42px;
     margin-bottom: 80px;
   }
@@ -55,11 +55,11 @@
   margin: 0 0 16px;
   color: $text-color-additional;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     align-self: end;
     margin-bottom: 68px;
   }
@@ -68,11 +68,11 @@
 .demo__statistics {
   margin: 20px 0 0;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-top: 53px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 0;
     margin-bottom: 10px;
   }

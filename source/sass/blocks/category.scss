@@ -2,11 +2,11 @@
   padding: 14px 20px 19px;
   background-color: $background-color-secondary;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding: 55px 32px 37px 53px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding-top: 26px;
     padding-bottom: 59px
   }
@@ -25,14 +25,14 @@
   background-size: cover;
   transform: translateX(-8px);
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     float: right;
     width: 280px;
     height: 280px;
     transform: translateX(12px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     float: left;
     width: 140px;
     height: 140px;
@@ -56,13 +56,13 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 21px;
     font-size: 36px;
     line-height: 44px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 46px;
     margin-left: 161px;
     margin-bottom: 71px;
@@ -75,22 +75,22 @@
   clear: both;
   margin: 0 0 12px;
 
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     color: $text-color-additional;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     clear: none;
     margin-bottom: 16px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     clear: both;
   }
 }
 
 .category__text:last-of-type {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     padding-bottom: 22px;
     border-bottom: 1px solid $category-line-color;
   }
@@ -119,13 +119,13 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-top: 36px;
     font-size: 20px;
     line-height: 28px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 11px;
   }
 }
@@ -141,7 +141,7 @@
   transition-property: background-position;
   transition-duration: $animation-duration;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-left: 24px;
   }
 }

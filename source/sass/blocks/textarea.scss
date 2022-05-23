@@ -22,7 +22,7 @@
     outline-color: $text-color-additional;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     height: 176px;
     padding: 12px 18px;
   }

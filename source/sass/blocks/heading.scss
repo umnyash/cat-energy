@@ -6,7 +6,7 @@
   font-weight: 400;
   text-transform: none;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     font-size: 60px;
     line-height: 60px;
   }
@@ -16,7 +16,7 @@
   font-size: 24px;
   line-height: 26px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     font-size: 36px;
     line-height: 36px;
   }
@@ -45,13 +45,13 @@
   padding-right: 20px;
   box-decoration-break: clone;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding-right: 40px;
   }
 }
 
 .heading--decorative::before {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     content: "";
     position: absolute;
     top: 0.67em;
@@ -62,7 +62,7 @@
     background-color: $background-color-accent;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     right: calc(100% + 40px);
   }
 }

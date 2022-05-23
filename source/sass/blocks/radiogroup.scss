@@ -6,21 +6,21 @@
   transition-property: outline-color;
   transition-duration: $animation-duration;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding: 24px 28px;
     border: 1px solid $form-control-border-color-1;
   }
 }
 
 .radiogroup:focus-within {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     outline-color: $text-color-additional;
   }
 }
 
 .radiogroup::before,
 .radiogroup::after {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     content: "";
     position: absolute;
     right: -20px;
@@ -32,7 +32,7 @@
 
 .radiogroup:focus-within::before,
 .radiogroup:focus-within::after {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     height: 2px;
     background-color: $text-color-additional;
   }

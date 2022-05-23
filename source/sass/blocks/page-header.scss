@@ -1,15 +1,15 @@
 .page-header {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     position: relative;
     padding: 11px 0 16px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding-top: 24px;
     padding-bottom: 24px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding-top: 53px;
     padding-bottom: 29px;
   }
@@ -41,7 +41,7 @@
 }
 
 .page-header__logo::after {
-  @media (max-width: $narrow-mobile-max-width) {
+  @media #{$narrow-mobile} {
     content: "";
     position: absolute;
     top: 24px;
@@ -64,18 +64,18 @@
   width: 151px;
   height: 38px;
 
-  @media (max-width: $narrow-mobile-max-width) {
+  @media #{$narrow-mobile} {
     width: 34px;
     object-fit: cover;
     object-position: left;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 174px;
     height: 52px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 202px;
     height: 59px;
   }
@@ -124,13 +124,13 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     display: none;
   }
 }
 
 .page-header__navigation {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -140,13 +140,13 @@
     transform: translateY(100%);
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding: 8px 0 0px 36px;
   }
 }
 
 .page-header__navigation--close {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     display: none;
   }
 }
@@ -155,7 +155,7 @@
   margin: 0;
 }
 
-@media (max-width: $mobile-max-width) {
+@media #{$mobile} {
   .page-header--nojs {
     position: static;
     padding-bottom: 0;

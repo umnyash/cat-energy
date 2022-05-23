@@ -4,13 +4,13 @@
   height: 232px;
   margin: 0 auto 10px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 592px;
     height: 511px;
     margin-bottom: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 21px;
   }
 }
@@ -51,11 +51,11 @@
   column-gap: 8px;
   align-items: center;
 
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     max-width: 400px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 580px;
     column-gap: 18px;
   }
@@ -76,7 +76,7 @@
   transition-property: outline-color;
   transition-duration: $animation-duration;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     font-size: 20px;
     line-height: 28px;
   }
@@ -123,7 +123,7 @@
   grid-template-columns: 24px 1fr 24px;
   background-color: $separator-transition-wrapper-background-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     height: 6px;
     margin-top: 3px;
     grid-template-columns: 17px 1fr 17px;
@@ -135,7 +135,7 @@
 .separator__transition-wrapper::after {
   content: "";
 
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     border: 1px solid $separator-transition-wrapper-border-color;
   }
 }
@@ -157,7 +157,7 @@
   border-top: 1px solid $separator-transition-wrapper-border-color;
   border-bottom: 1px solid $separator-transition-wrapper-border-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     border: none;
   }
 }
@@ -179,7 +179,7 @@
   transition-property: border-color, outline-color, opacity, filter;
   transition-duration: $animation-duration;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     top: -14px;
     display: flex;
     width: 34px;
@@ -202,28 +202,28 @@
 }
 
 .separator__transition-button:hover {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     opacity: 0.8;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     filter: drop-shadow(0 2px 4px fade-out($separator-transition-button-shadow-basic-color, 0.81));
   }
 }
 
 .separator__transition-button:active {
-  @media (max-width: $mobile-max-width) {
+  @media #{$mobile} {
     opacity: 0.6;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     border-color: $background-color-accent;
     filter: drop-shadow(0 3px 5px fade-out($separator-transition-button-shadow-basic-color, 0.8));
   }
 }
 
 .separator__transition-button::after {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     content: "";
     width: 8px;
     height: 8px;
@@ -240,7 +240,7 @@
   bottom: -12px;
   left: -10px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     right: -15px;
     left: -15px;
   }

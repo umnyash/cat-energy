@@ -1,5 +1,5 @@
 .categories {
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding-top: 81px;
   }
 }
@@ -11,11 +11,11 @@
   row-gap: 20px;
   list-style: none;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     row-gap: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     grid-template-columns: 1fr 1fr;
     row-gap: 40px;
     column-gap: 80px;

@@ -1,19 +1,19 @@
 .extra-catalog {
   padding: 25px 0 35px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding-top: 68px;
     padding-bottom: 77px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding-top: 76px;
     padding-bottom: 82px;
   }
 }
 
 .extra-catalog__container {
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     display: grid;
     grid-template-columns: 1fr 245px;
     column-gap: 80px;
@@ -23,12 +23,12 @@
 .extra-catalog__heading {
   margin: 0 0 34px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 80px;
     margin-left: 40px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     grid-column: 1 / -1;
     margin-left: 0;
   }
@@ -38,11 +38,11 @@
   width: 100%;
   margin-bottom: 35px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     margin-bottom: 68px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 0;
   }
 }

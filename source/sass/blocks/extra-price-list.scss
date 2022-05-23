@@ -2,14 +2,14 @@
   border-collapse: collapse;
   color: $text-color-additional;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     border: 1px solid $extra-price-list-item-border-color;
     border-top: none;
     font-size: 16px;
     line-height: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     border: none;
   }
 }
@@ -22,7 +22,7 @@
   row-gap: 9px;
   column-gap: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     padding: 26px 37px 27px;
     grid-template-columns: 1fr auto auto;
     row-gap: 18px;
@@ -30,7 +30,7 @@
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     padding: 17px 0 15px;
     grid-template-columns: 285px 1fr auto auto;
     column-gap: 40px;
@@ -66,7 +66,7 @@
   text-transform: uppercase;
   color: $extra-price-list-name-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     grid-column: 1 / 2;
     font-size: 20px;
     line-height: 24px;
@@ -103,7 +103,7 @@
   padding: 0;
   margin: 4px 0 0;
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     grid-column: auto;
     min-width: 244px;
     margin-top: 0;

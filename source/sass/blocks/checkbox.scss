@@ -21,7 +21,7 @@
     transition-duration: $animation-duration;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     grid-template-rows: 40px;
     grid-template-columns: 40px 1fr;
     column-gap: 19px;
@@ -46,7 +46,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet-desktop} {
     width: 25px;
     height: 20px;
   }
