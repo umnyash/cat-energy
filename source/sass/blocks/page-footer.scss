@@ -28,9 +28,7 @@
 }
 
 .page-footer__item--align--right {
-  @media #{$mobile} {
-    text-align: right;
-  }
+  text-align: right;
 }
 
 .page-footer__logo {
