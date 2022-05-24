@@ -34,8 +34,6 @@
 .page-footer__logo {
   display: inline-block;
   margin: 25px 0 19px;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
 
@@ -43,9 +41,7 @@
     opacity: 0.8;
   }
 
-  &[href]:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &[href]:active {
     opacity: 0.6;
@@ -73,14 +69,10 @@
   align-items: center;
   text-decoration: none;
   color: $text-color-additional;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     opacity: 0.3;

@@ -1,18 +1,19 @@
 .radiogroup {
   position: relative;
   padding: 23px 0 19px;
-  outline: 2px solid transparent;
-  outline-offset: -1px;
   transition-property: outline-color;
   transition-duration: $animation-duration;
 
   @media #{$tablet-desktop} {
     padding: 24px 28px;
     border: 1px solid $form-control-border-color-1;
+    outline: 2px solid transparent;
+    outline-offset: -1px;
   }
 }
 
-.radiogroup:focus-within {
+.radiogroup:focus-within,
+.radiogroup:active {
   @media #{$tablet-desktop} {
     outline-color: $text-color-additional;
   }
@@ -31,7 +32,9 @@
 }
 
 .radiogroup:focus-within::before,
-.radiogroup:focus-within::after {
+.radiogroup:active::before,
+.radiogroup:focus-within::after,
+.radiogroup:active::after {
   @media #{$mobile} {
     height: 2px;
     background-color: $text-color-additional;

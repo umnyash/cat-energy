@@ -22,8 +22,6 @@
 }
 
 .page-header__logo {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
 
@@ -31,9 +29,7 @@
     opacity: 0.8;
   }
 
-  &[href]:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &[href]:active {
     opacity: 0.6;
@@ -93,9 +89,7 @@
   background-image: url("../img/icons/burger.svg");
   background-repeat: no-repeat;
   background-position: center;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  transition-property: background-image, opacity, outline-color;
+  transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
   cursor: pointer;
 
@@ -116,9 +110,7 @@
     opacity: 0.6;
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     opacity: 0.3;

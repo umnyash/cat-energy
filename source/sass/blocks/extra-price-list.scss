@@ -76,8 +76,6 @@
 .extra-price-list__name-link {
   text-decoration: none;
   color: inherit;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
 
@@ -85,9 +83,7 @@
     opacity: 0.6;
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     opacity: 0.3;

@@ -72,7 +72,6 @@
   color: $text-color;
   background-color: transparent;
   cursor: pointer;
-  outline: 2px solid transparent;
   transition-property: outline-color;
   transition-duration: $animation-duration;
 
@@ -85,9 +84,7 @@
     order: 2;
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus($text-color, 0);
 }
 
 .separator__button-label {
@@ -174,8 +171,6 @@
   background-color: $background-color-accent;
   transform: translateX(-50%);
   cursor: grab;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: border-color, outline-color, opacity, filter;
   transition-duration: $animation-duration;
 
@@ -192,9 +187,7 @@
     filter: drop-shadow(0 1px 3px fade-out($separator-transition-button-shadow-basic-color, 0.84));
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     cursor: grabbing;

@@ -52,8 +52,6 @@
   color: inherit;
   text-transform: inherit;
   appearance: textfield;
-  outline: 2px solid transparent;
-  outline-offset: -1px;
   transition-property: border-color, outline-color;
   transition-duration: $animation-duration;
 
@@ -61,22 +59,19 @@
   &::-webkit-inner-spin-button {
     appearance: none;
   }
+
+  @include focus($text-color-additional, -1px, 2px);
 }
 
 [class*="textfield--icon--"] .textfield__control {
   padding-right: 3em;
 }
 
+.textfield:not(.textfield--error):hover .textfield__control {
+  border-color: $form-control-border-color-2;
+}
+
 .textfield--error .textfield__control {
   outline-width: 2px;
   outline-color: $error-color;
-}
-
-.textfield__control:focus {
-  outline-color: $text-color-additional;
-}
-
-.textfield:hover .textfield__control {
-  border-color: $form-control-border-color-2;
-  outline-color: transparent;
 }

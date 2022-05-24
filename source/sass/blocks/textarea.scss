@@ -13,14 +13,10 @@
   font: inherit;
   color: inherit;
   text-transform: inherit;
-  outline: 2px solid transparent;
-  outline-offset: -1px;
   transition-property: border-color, outline-color;
   transition-duration: $animation-duration;
 
-  &:focus {
-    outline-color: $text-color-additional;
-  }
+  @include focus($text-color-additional, -1px, 2px);
 
   @media #{$tablet-desktop} {
     height: 176px;

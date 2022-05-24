@@ -11,7 +11,6 @@
   text-decoration: none;
   color: $text-color-secondary;
   background-color: $background-color-accent;
-  outline: 2px solid transparent;
   transition-property: color, background-color, outline-color;
   transition-duration: $animation-duration;
 
@@ -19,9 +18,7 @@
     background-color: $button-hover-background-color;
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     color: fade-out($text-color-secondary, 0.7);

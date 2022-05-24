@@ -106,14 +106,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: opacity, outline-color;
   transition-duration: $animation-duration;
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 
   &:active {
     opacity: 0.3;

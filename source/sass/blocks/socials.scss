@@ -18,8 +18,6 @@
 .socials__link {
   position: relative;
   display: block;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
   transition-property: outline-color;
   transition-duration: $animation-duration;
 
@@ -44,9 +42,7 @@
     transition-duration: $animation-duration;
   }
 
-  &:focus-visible {
-    outline-color: $text-color-additional;
-  }
+  @include focus;
 }
 
 .socials__link--vk::after {
