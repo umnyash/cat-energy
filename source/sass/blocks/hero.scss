@@ -179,4 +179,8 @@
     width: auto;
     margin: 29px 0 0 87px;
   }
+
+  @media #{$desktop} {
+    max-width: 442px;
+  }
 }

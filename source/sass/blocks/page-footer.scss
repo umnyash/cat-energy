@@ -90,6 +90,8 @@
   @media #{$mobile} {
     position: absolute;
     left: 0;
+    max-width: 230px;
+    text-align: left;
   }
 
   @media #{$tablet-desktop} {
@@ -98,6 +100,7 @@
 }
 
 .page-footer__copyright-logo {
+  flex-shrink: 0;
   fill: $copyright-logo-color;
   transition-property: fill;
   transition-duration: $animation-duration;
