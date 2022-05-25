@@ -53,7 +53,11 @@ const optimizeImages = () => {
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [
+          { cleanupIDs: false }
+        ]
+      })
     ]))
     .pipe(gulp.dest('build'))
 }
